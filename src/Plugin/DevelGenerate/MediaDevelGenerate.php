@@ -148,7 +148,7 @@ class MediaDevelGenerate extends DevelGenerateBase implements ContainerFactoryPl
     $bundles = $this->mediaBundleStorage->loadMultiple();
 
     if (empty($bundles)) {
-      $create_url = $this->urlGenerator->generateFromRoute('media.bundle_add');
+      $create_url = $this->urlGenerator->generateFromRoute('entity.media_bundle.add_form');
       $this->setMessage($this->t('You do not have any media bundles that can be generated. <a href="@create-bundle">Go create a new media bundle</a>', ['@create-bundle' => $create_url]), 'error', FALSE);
       return [];
     }
